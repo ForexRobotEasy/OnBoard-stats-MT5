@@ -1,0 +1,60 @@
+
+//+------------------------------------------------------------------+
+//|                        OnBoard Stats MT5                          |
+//|           Developer's Site: forexroboteasy.com                    |
+//|             Development by: Forex Robot Easy Team                 |
+//+------------------------------------------------------------------+
+
+//+------------------------------------------------------------------+
+//|                 Symbols Order Statistics Sub-panel                |
+//+------------------------------------------------------------------+
+void SymbolsOrderStatistics()
+{
+    // Retrieve symbol order statistics
+    string type = GetOrderType(); // Get order type (market or pending)
+    string symbol = GetSymbolName(); // Get symbol name
+    string status = GetOrderStatus(); // Get order status
+    
+    // Color-code symbols with pending orders
+    if(type == 'pending')
+    {
+        ColorCodeSymbolRow(symbol); // Color-code symbol row
+    }
+    
+    // Function to change chart to a specific symbol when clicking on a symbol row
+    ChangeChartBySymbolRow(symbol);
+}
+
+// Function to retrieve order type
+string GetOrderType()
+{
+    // Code to retrieve order type
+    return 'market';
+}
+
+// Function to retrieve symbol name
+string GetSymbolName()
+{
+    // Code to retrieve symbol name
+    return 'EURUSD';
+}
+
+// Function to retrieve order status
+string GetOrderStatus()
+{
+    // Code to retrieve order status
+    return 'open';
+}
+
+// Function to color-code symbol row
+void ColorCodeSymbolRow(string symbol)
+{
+    // Code to color-code symbol row
+    // Use different colors for different symbols with pending orders
+}
+
+// Function to change chart by symbol row
+void ChangeChartBySymbolRow(string symbol)
+{
+    // Code to change chart to a specific symbol when clicking on a symbol row
+}
